@@ -1,5 +1,6 @@
 import RecommendationCard from "./ui/RecommendationCard";
 import RecordResult from "./ui/RecordResult";
+import { recordResultsList } from "./utils/RecordResultsList";
 
 export default function Home() {
   return (
@@ -12,13 +13,65 @@ export default function Home() {
           <RecommendationCard />
         </div>
       </div>
-      <div className="w-full h-screen flex flex-col gap-4 p-8">
-        <RecordResult
-          imageString="/alligator.webp"
-          title="Alligator"
-          artist="The National"
-          year="2005"
-        />
+      <div className="w-full h-screen flex flex-col items-center p-8">
+        <div className="w-full max-w-[1360px] flex flex-col gap-4">
+          <div className="flex flex-wrap gap-10">
+            {recordResultsList.map((record) => (
+              <RecordResult
+                key={record.id}
+                imageString={record.imageString}
+                title={record.title}
+                artist={record.artist}
+                year={record.year}
+              />
+            ))}
+          </div>
+        </div>
+        {/* 
+
+          <div className="flex flex-wrap gap-10">
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            />
+            <RecordResult
+              imageString="/alligator.webp"
+              title="Alligator"
+              artist="The National"
+              year="2005"
+            /> */}
       </div>
     </div>
   );

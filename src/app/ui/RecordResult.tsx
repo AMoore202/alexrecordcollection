@@ -1,11 +1,5 @@
 import Image from "next/image";
-
-interface RecordResultProps {
-  imageString: string;
-  title: string;
-  artist: string;
-  year: string;
-}
+import { RecordResultProps } from "../utils/types";
 
 export default function RecordResult({
   imageString,
@@ -14,7 +8,7 @@ export default function RecordResult({
   year,
 }: RecordResultProps) {
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-3 w-[294px]">
       <div className="relative">
         <Image
           src={imageString}
@@ -35,7 +29,7 @@ export default function RecordResult({
         <h2 className="font-sans text-4xl font-semibold text-center">
           {title}
         </h2>
-        <p className="font-sans text-white font-light text-lg text-center">
+        <p className="w-full font-sans text-white font-light text-lg text-center">
           {artist} &#183; {year}
         </p>
       </div>
