@@ -20,7 +20,7 @@ export const recordResultsList: RecordResultProps[] = [
     title: "Abbey Road",
     artist: "The Beatles",
     year: "1969",
-    imageString: "/abbeyroad.webp",
+    imageString: "/abbeyRoad.webp",
   },
   {
     id: 4,
