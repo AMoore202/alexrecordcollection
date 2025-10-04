@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import RecommendationCard from "./components/ui/RecommendationCard";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
+import { Input } from "./components/ui/input";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,8 +30,14 @@ export default function Home() {
       </div>
       <div className="w-full h-screen flex flex-col items-center p-8 overflow-y-scroll">
         <div className="w-full max-w-[1360px] flex flex-col gap-4">
-          <div className="flex flex-wrap gap-12">
-            {recordResultsList.map((record) => (
+          <Input
+            type="text"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <div className="grid grid-cols-4 gap-12">
+            {filteredRecords.map((record) => (
               <RecordResult
                 key={record.id}
                 imageString={record.imageString}
