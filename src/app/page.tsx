@@ -1,8 +1,20 @@
+import { useState, useMemo } from "react";
 import RecommendationCard from "./ui/RecommendationCard";
 import RecordResult from "./ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredRecords = useMemo(() => {
+    const term = searchTerm.toLowerCase();
+    return recordResultsList.filter(
+      (record) =>
+        record.title.toLowerCase().includes(term) ||
+        record.artist.toLowerCase().includes(term)
+    );
+  }, [searchTerm]);
+
   return (
     <div className="flex">
       <div className="w-[500px] bg-[#151414] h-screen flex flex-col border-r border-white/5">
