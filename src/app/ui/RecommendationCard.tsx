@@ -3,7 +3,7 @@ import { MailIcon } from "./Icons";
 
 export default function RecommendationCard() {
   return (
-    <div className="flex flex-col w-full bg-[#191818] rounded-3xl p-4 gap-3">
+    <div className="flex flex-col w-full bg-[#191818] rounded-2xl p-3 gap-3">
       <div className="flex flex-col w-full px-2 py-3 gap-4">
         <h3 className="font-sans text-white text-2xl font-stretch-semi-expanded font-semibold">
           Something I&#39;m Missing?

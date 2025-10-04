@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <div className="w-full h-screen flex flex-col items-center p-8 overflow-y-scroll">
         <div className="w-full max-w-[1360px] flex flex-col gap-4">
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap gap-12">
             {recordResultsList.map((record) => (
               <RecordResult
                 key={record.id}
