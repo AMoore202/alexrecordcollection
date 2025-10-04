@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
-import RecommendationCard from "./ui/RecommendationCard";
-import RecordResult from "./ui/RecordResult";
+import RecommendationCard from "../components/ui/RecommendationCard";
+import RecordResult from "../components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
 
 export default function Home() {
