@@ -26,7 +26,7 @@ export default function RecordResult({
         />
       </div>
       <div className="flex flex-col gap-2 px-4">
-        <h2 className="font-sans text-4xl font-semibold text-center">
+        <h2 className="font-sans text-3xl font-semibold text-center">
           {title}
         </h2>
         <p className="w-full font-sans text-white font-light text-lg text-center">

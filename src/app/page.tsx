@@ -13,7 +13,7 @@ export default function Home() {
           <RecommendationCard />
         </div>
       </div>
-      <div className="w-full h-screen flex flex-col items-center p-8">
+      <div className="w-full h-screen flex flex-col items-center p-8 overflow-y-scroll">
         <div className="w-full max-w-[1360px] flex flex-col gap-4">
           <div className="flex flex-wrap gap-10">
             {recordResultsList.map((record) => (
@@ -27,51 +27,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        {/* 
-
-          <div className="flex flex-wrap gap-10">
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            />
-            <RecordResult
-              imageString="/alligator.webp"
-              title="Alligator"
-              artist="The National"
-              year="2005"
-            /> */}
       </div>
     </div>
   );
