@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { RecordResultProps } from "../../app/utils/types";
+import { RecordResultProps } from "../../utils/types";
 
 export default function RecordResult({
   imageString,
