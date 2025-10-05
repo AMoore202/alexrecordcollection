@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="flex">
-      <div className="w-[500px] bg-[#151414] h-screen flex flex-col border-r border-white/5">
+      <div className="w-[450px] bg-[#151414] h-screen flex flex-col border-r border-white/5">
         <div className="p-4 w-full border-b border-white/5">
           <h1 className="font-title text-white text-5xl">My Collection</h1>
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <div className="w-full h-screen flex flex-col items-center px-8 py-10 overflow-y-scroll">
         <div className="w-full max-w-[1360px] flex flex-col gap-8">
-          <div className="flex w-full justify-between items-center px-4">
+          <div className="flex w-full justify-between items-center ">
             <div className="relative w-[250px]">
               <Input
                 type="text"
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-4 gap-12 justify-items-center">
+            <div className="grid grid-cols-4 gap-8 justify-items-center">
               {filteredRecords.map((record) => (
                 <RecordResult
                   key={record.id}
