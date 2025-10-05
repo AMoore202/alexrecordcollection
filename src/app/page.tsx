@@ -19,6 +19,11 @@ export default function Home() {
     );
   }, [searchTerm]);
 
+  const filteredRecordsCount = filteredRecords.length;
+  const filteredArtistsCount = new Set(
+    filteredRecords.map((record) => record.artist)
+  ).size;
+
   return (
     <div className="flex">
       <div className="w-[500px] bg-[#151414] h-screen flex flex-col border-r border-white/5">
@@ -31,16 +36,21 @@ export default function Home() {
       </div>
       <div className="w-full h-screen flex flex-col items-center px-8 py-10 overflow-y-scroll">
         <div className="w-full max-w-[1360px] flex flex-col gap-8">
-          <div className="relative w-[250px]">
-            <Input
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <SearchIcon className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50" />
+          <div className="flex w-full justify-between items-center px-4">
+            <div className="relative w-[250px]">
+              <Input
+                type="text"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <SearchIcon className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50" />
+            </div>
+            <p className="font-sans font-medium text-white/50 text-sm px-2">
+              {filteredRecordsCount} records, {filteredArtistsCount} artists
+            </p>
           </div>
-          <div className="grid grid-cols-4 gap-12">
+          <div className="grid grid-cols-4 gap-12 justify-items-center">
             {filteredRecords.map((record) => (
               <RecordResult
                 key={record.id}
