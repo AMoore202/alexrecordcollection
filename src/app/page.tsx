@@ -35,9 +35,9 @@ export default function Home() {
           <RecommendationCard />
         </div>
       </div>
-      <div className="w-full h-screen flex flex-col items-center px-8 py-10 overflow-y-scroll">
-        <div className="w-full max-w-[1360px] flex flex-col gap-8">
-          <div className="flex w-full justify-between items-center ">
+      <div className="w-full h-screen flex flex-col items-center px-8 py-10">
+        <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
+          <div className="flex w-full justify-between items-center px-6">
             <div className="relative w-[250px]">
               <Input
                 type="text"
@@ -52,7 +52,7 @@ export default function Home() {
             </p>
           </div>
           {filteredRecordsCount === 0 ? (
-            <div className="flex flex-col items-center justify-center w-full">
+            <div className="flex flex-col items-center justify-center w-full h-full pb-16">
               <div className="max-w-[300px] flex flex-col items-center gap-6">
                 <div className="flex flex-col items-center gap-2">
                   <h2 className="font-sans font-semibold text-white text-lg">
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-4 gap-8 justify-items-center">
+            <div className="grid grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide">
               {filteredRecords.map((record) => (
                 <RecordResult
                   key={record.id}
