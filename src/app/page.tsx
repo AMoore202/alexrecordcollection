@@ -5,7 +5,8 @@ import RecommendationCard from "./components/ui/RecommendationCard";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
 import { Input } from "./components/ui/input";
-import { SearchIcon } from "./components/ui/Icons";
+import { SearchIcon, MailIcon } from "./components/ui/Icons";
+import { Button } from "./components/ui/Button";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,17 +51,37 @@ export default function Home() {
               {filteredRecordsCount} records, {filteredArtistsCount} artists
             </p>
           </div>
-          <div className="grid grid-cols-4 gap-12 justify-items-center">
-            {filteredRecords.map((record) => (
-              <RecordResult
-                key={record.id}
-                imageString={record.imageString}
-                title={record.title}
-                artist={record.artist}
-                year={record.year}
-              />
-            ))}
-          </div>
+          {filteredRecordsCount === 0 ? (
+            <div className="flex flex-col items-center justify-center w-full">
+              <div className="max-w-[300px] flex flex-col items-center gap-6">
+                <div className="flex flex-col items-center gap-2">
+                  <h2 className="font-sans font-semibold text-white text-lg">
+                    Damn, no record found.
+                  </h2>
+                  <p className="font-sans text-white/75 text-center font-base">
+                    Looks like I don&apos;t have it yet - send me a note on what
+                    I am missing.
+                  </p>
+                </div>
+                <Button href="mailto:alexandermoore202@gmail.com">
+                  <MailIcon />
+                  <span>Recommend a Record</span>
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-4 gap-12 justify-items-center">
+              {filteredRecords.map((record) => (
+                <RecordResult
+                  key={record.id}
+                  imageString={record.imageString}
+                  title={record.title}
+                  artist={record.artist}
+                  year={record.year}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
