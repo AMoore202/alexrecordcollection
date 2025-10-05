@@ -5,6 +5,7 @@ import RecommendationCard from "./components/ui/RecommendationCard";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
 import { Input } from "./components/ui/input";
+import { SearchIcon } from "./components/ui/Icons";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,14 +29,17 @@ export default function Home() {
           <RecommendationCard />
         </div>
       </div>
-      <div className="w-full h-screen flex flex-col items-center p-8 overflow-y-scroll">
-        <div className="w-full max-w-[1360px] flex flex-col gap-4">
-          <Input
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+      <div className="w-full h-screen flex flex-col items-center px-8 py-10 overflow-y-scroll">
+        <div className="w-full max-w-[1360px] flex flex-col gap-8">
+          <div className="relative w-[250px]">
+            <Input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <SearchIcon className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50" />
+          </div>
           <div className="grid grid-cols-4 gap-12">
             {filteredRecords.map((record) => (
               <RecordResult
