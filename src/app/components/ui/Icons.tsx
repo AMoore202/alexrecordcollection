@@ -53,3 +53,96 @@ export function SearchIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function SortAscIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="12"
+      height="13"
+      viewBox="0 0 12 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.5 6H7.5"
+        stroke="#898888"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.5 8H9"
+        stroke="#898888"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.5 10H10.5"
+        stroke="#898888"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4.5 4L3 2.5L1.5 4"
+        stroke="#898888"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3 3.5V10.5"
+        stroke="#898888"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function SortDescIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11 5H21"
+        stroke="#898888"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11 9H18"
+        stroke="#898888"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11 13H15"
+        stroke="#898888"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3 17L6 20L9 17"
+        stroke="#898888"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6 18V4"
+        stroke="#898888"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
