@@ -84,7 +84,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <button
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323]"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323] hover:cursor-pointer"
                   onClick={handleSortOrderToggle}
                 >
                   {sortOrder === "asc" ? (
