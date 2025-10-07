@@ -10,6 +10,8 @@ import { Button } from "./components/ui/Button";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [sortBy, setSortBy] = useState<"year" | "artist">("year");
 
   const filteredRecords = useMemo(() => {
     const term = searchTerm.toLowerCase();
@@ -24,6 +26,16 @@ export default function Home() {
   const filteredArtistsCount = new Set(
     filteredRecords.map((record) => record.artist)
   ).size;
+
+  const sortedRecords = [...filteredRecords].sort((a, b) =>
+    sortBy === "artist"
+      ? sortOrder === "asc"
+        ? a.artist.localeCompare(b.artist)
+        : b.artist.localeCompare(a.artist)
+      : sortOrder === "asc"
+      ? Number(a.year) - Number(b.year)
+      : Number(b.year) - Number(a.year)
+  );
 
   return (
     <div className="flex">
@@ -71,7 +83,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide">
-              {filteredRecords.map((record) => (
+              {sortedRecords.map((record) => (
                 <RecordResult
                   key={record.id}
                   imageString={record.imageString}
