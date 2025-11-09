@@ -69,7 +69,7 @@ export default function Home() {
           <RecommendationCard />
         </div>
       </div>
-      <div className="w-full h-screen flex flex-col items-center px-8 py-10">
+      <div className="w-full h-screen flex flex-col items-center px-8 pt-10">
         <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
           <div className="flex w-full justify-between items-center px-6">
             <div className="flex gap-2 items-center">
@@ -139,7 +139,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide">
+            <div className="grid grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-1">
               {sortedRecords.map((record) => (
                 <RecordResult
                   key={record.id}
