@@ -134,7 +134,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-1">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-1">
               {sortedRecords.map((record) => (
                 <RecordResult
                   key={record.id}
