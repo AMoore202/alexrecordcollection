@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import RecommendationCard from "./components/ui/RecommendationCard";
+import DesktopMenu from "./components/ui/DesktopMenu";
+import MobileMenu from "./components/ui/MobileMenu";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
 import { Input } from "./components/ui/input";
@@ -60,16 +61,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex">
-      <div className="w-[450px] bg-[#151414] h-screen flex flex-col border-r border-white/5">
-        <div className="p-4 w-full border-b border-white/5">
-          <h1 className="font-title text-white text-5xl">My Collection</h1>
-        </div>
-        <div className="w-full p-4 flex flex-col justify-between">
-          <RecommendationCard />
-        </div>
-      </div>
-      <div className="w-full h-screen flex flex-col items-center px-8 pt-10">
+    <div className="flex 2xl:flex-row flex-col">
+      <DesktopMenu />
+      <MobileMenu />
+      <div className="w-full h-screen flex flex-col items-center px-8 pt-10 z-0">
         <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
           <div className="flex w-full justify-between items-center px-6">
             <div className="flex gap-2 items-center">
@@ -133,7 +128,7 @@ export default function Home() {
                   </p>
                 </div>
                 <Button href="mailto:alexandermoore202@gmail.com">
-                  <MailIcon />
+                  <MailIcon className="text-[#C4C4C4]" />
                   <span>Recommend a Record</span>
                 </Button>
               </div>

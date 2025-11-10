@@ -14,7 +14,7 @@ export default function RecommendationCard() {
         </p>
       </div>
       <Button href="mailto:alexandermoore202@gmail.com" className="w-full">
-        <MailIcon />
+        <MailIcon className="text-[#C4C4C4]" />
         <span>Recommend a Record</span>
       </Button>
     </div>
