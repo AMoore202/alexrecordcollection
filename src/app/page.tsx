@@ -5,24 +5,9 @@ import DesktopMenu from "./components/ui/DesktopMenu";
 import MobileMenu from "./components/ui/MobileMenu";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
-import { Input } from "./components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectLabel,
-  SelectGroup,
-  SelectValue,
-} from "@/app/components/ui/select";
-import {
-  SearchIcon,
-  MailIcon,
-  SortAscIcon,
-  SortDescIcon,
-  FilterIcon,
-} from "./components/ui/Icons";
+import { MailIcon } from "./components/ui/Icons";
 import { Button } from "./components/ui/Button";
+import FilterBar from "./components/ui/FilterBar";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -61,69 +46,31 @@ export default function Home() {
     setSortBy(value);
   };
 
+  const handleSortItemPress: (
+    newSortBy: "year" | "artist",
+    newSortOrder: "asc" | "desc"
+  ) => void = (newSortBy, newSortOrder) => {
+    setSortBy(newSortBy);
+    setSortOrder(newSortOrder);
+  };
+
   return (
     <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="absolute bottom-0 w-full h-[500px] bg-[#151414] ring ring-white/25 rounded-t-3xl z-50 p-6">
-        <h2 className="font-sans font-semibold text-white text-lg">
-          Sort Order
-        </h2>
-      </div>
       <div className="w-full h-screen flex flex-col items-center px-8 pt-10 z-0">
         <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
-          <div className="flex flex-col md:flex-row w-full gap-2 md:justify-between md:items-center md:px-6">
-            <div className="flex gap-2 items-center w-full md:w-auto">
-              <div className="relative w-full md:w-[250px]">
-                <Input
-                  type="text"
-                  placeholder="Search"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <SearchIcon className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50" />
-              </div>
-              <div className="relative hidden md:flex items-center">
-                <button
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323] hover:cursor-pointer"
-                  onClick={handleSortOrderToggle}
-                >
-                  {sortOrder === "asc" ? (
-                    <SortAscIcon className="size-4.5" />
-                  ) : (
-                    <SortDescIcon className="size-4.5" />
-                  )}
-                </button>
-                <Select
-                  defaultValue="year"
-                  value={sortBy}
-                  onValueChange={handleSortByChange}
-                >
-                  <SelectTrigger className="w-[180px] text-white/50 font-sans">
-                    <div className="flex items-center gap-2 h-full pl-7">
-                      <div className="w-[1px] h-full bg-[#898888]/25"></div>
-                      <SelectValue />
-                    </div>
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel className="font-sans text-white/50 font-semibold">
-                        Sort By
-                      </SelectLabel>
-                      <SelectItem value="year">Release Year</SelectItem>
-                      <SelectItem value="artist">Artist</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </div>
-              <button className="flex md:hidden items-center justify-center rounded-lg px-4 py-4 gap-3 text-sans text-base text-white font-sans font-medium bg-[#272525] hover:bg-[#201E1E] active:scale-98 transition-transform shadow-[0_0.5px_1px_0_rgba(255,255,255,0.05)_inset,0_8px_16px_-8px_rgba(0,0,0,0.15),0_2px_4px_-2px_rgba(0,0,0,0.15),0_4px_8px_-4px_rgba(0,0,0,0.15)]">
-                <FilterIcon />
-              </button>
-            </div>
-            <p className="font-sans font-medium text-white/50 text-sm px-2">
-              {filteredRecordsCount} records, {filteredArtistsCount} artists
-            </p>
-          </div>
+          <FilterBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            sortOrder={sortOrder}
+            sortBy={sortBy}
+            handleSortOrderToggle={handleSortOrderToggle}
+            handleSortByChange={handleSortByChange}
+            handleSortItemPress={handleSortItemPress}
+            filteredRecordsCount={filteredRecordsCount}
+            filteredArtistsCount={filteredArtistsCount}
+          />
           {filteredRecordsCount === 0 ? (
             <div className="flex flex-col items-center justify-center w-full h-full pb-16">
               <div className="max-w-[300px] flex flex-col items-center gap-6">

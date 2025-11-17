@@ -48,8 +48,8 @@ export default function MobileMenu() {
         className={clsx(
           "absolute top-20 right-4 w-[250px] bg-[#151414] z-10 flex flex-col items-center border border-white/5 rounded-2xl shadow-lg transition-all duration-200 origin-top ease-out",
           {
-            "opacity-100 scale-100": isOpen,
-            "opacity-0 scale-96 -translate-y-1": !isOpen,
+            "opacity-100 scale-100 pointer-events-auto": isOpen,
+            "opacity-0 scale-96 -translate-y-1 pointer-events-none": !isOpen,
           }
         )}
       >
