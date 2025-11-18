@@ -58,8 +58,8 @@ export default function Home() {
     <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center px-8 pt-10 z-0">
-        <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
+      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0">
+        <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4">
           <FilterBar
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
@@ -90,7 +90,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-1">
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-2">
               {sortedRecords.map((record) => (
                 <RecordResult
                   key={record.id}
