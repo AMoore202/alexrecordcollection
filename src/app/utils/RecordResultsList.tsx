@@ -316,4 +316,11 @@ export const recordResultsList: RecordResultProps[] = [
     year: "2019",
     imageString: "/aWarOnEverything.jpg",
   },
+  {
+    id: 46,
+    title: "No Hard Feelings",
+    artist: "The Beaches",
+    year: "2025",
+    imageString: "/noHardFeelings.jpg",
+  },
 ];
