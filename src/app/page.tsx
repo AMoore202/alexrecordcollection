@@ -5,23 +5,9 @@ import DesktopMenu from "./components/ui/DesktopMenu";
 import MobileMenu from "./components/ui/MobileMenu";
 import RecordResult from "./components/ui/RecordResult";
 import { recordResultsList } from "./utils/RecordResultsList";
-import { Input } from "./components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectLabel,
-  SelectGroup,
-  SelectValue,
-} from "@/app/components/ui/select";
-import {
-  SearchIcon,
-  MailIcon,
-  SortAscIcon,
-  SortDescIcon,
-} from "./components/ui/Icons";
+import { MailIcon } from "./components/ui/Icons";
 import { Button } from "./components/ui/Button";
+import FilterBar from "./components/ui/FilterBar";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -60,61 +46,31 @@ export default function Home() {
     setSortBy(value);
   };
 
+  const handleSortItemPress: (
+    newSortBy: "year" | "artist",
+    newSortOrder: "asc" | "desc"
+  ) => void = (newSortBy, newSortOrder) => {
+    setSortBy(newSortBy);
+    setSortOrder(newSortOrder);
+  };
+
   return (
-    <div className="flex 2xl:flex-row flex-col">
+    <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center px-8 pt-10 z-0">
-        <div className="w-full max-w-[1360px] flex flex-col gap-8 h-full">
-          <div className="flex w-full justify-between items-center px-6">
-            <div className="flex gap-2 items-center">
-              <div className="relative w-[250px]">
-                <Input
-                  type="text"
-                  placeholder="Search"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <SearchIcon className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50" />
-              </div>
-              <div className="relative">
-                <button
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323] hover:cursor-pointer"
-                  onClick={handleSortOrderToggle}
-                >
-                  {sortOrder === "asc" ? (
-                    <SortAscIcon className="size-4.5" />
-                  ) : (
-                    <SortDescIcon className="size-4.5" />
-                  )}
-                </button>
-                <Select
-                  defaultValue="year"
-                  value={sortBy}
-                  onValueChange={handleSortByChange}
-                >
-                  <SelectTrigger className="w-[180px] text-white/50 font-sans">
-                    <div className="flex items-center gap-2 h-full pl-7">
-                      <div className="w-[1px] h-full bg-[#898888]/25"></div>
-                      <SelectValue />
-                    </div>
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel className="font-sans text-white/50 font-semibold">
-                        Sort By
-                      </SelectLabel>
-                      <SelectItem value="year">Release Year</SelectItem>
-                      <SelectItem value="artist">Artist</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            <p className="font-sans font-medium text-white/50 text-sm px-2">
-              {filteredRecordsCount} records, {filteredArtistsCount} artists
-            </p>
-          </div>
+      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0">
+        <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4">
+          <FilterBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            sortOrder={sortOrder}
+            sortBy={sortBy}
+            handleSortOrderToggle={handleSortOrderToggle}
+            handleSortByChange={handleSortByChange}
+            handleSortItemPress={handleSortItemPress}
+            filteredRecordsCount={filteredRecordsCount}
+            filteredArtistsCount={filteredArtistsCount}
+          />
           {filteredRecordsCount === 0 ? (
             <div className="flex flex-col items-center justify-center w-full h-full pb-16">
               <div className="max-w-[300px] flex flex-col items-center gap-6">
@@ -134,7 +90,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-1">
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-2">
               {sortedRecords.map((record) => (
                 <RecordResult
                   key={record.id}

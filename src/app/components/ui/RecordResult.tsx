@@ -8,28 +8,32 @@ export default function RecordResult({
   year,
 }: RecordResultProps) {
   return (
-    <div className="flex flex-col items-center gap-3 w-[294px]">
+    <div className="flex flex-col items-center gap-3 w-[180px] md:w-[294px]">
       <div className="relative">
-        <Image
-          src={imageString}
-          alt={`${title} album cover`}
-          width={276}
-          height={276}
-          className="blur-[5px] opacity-10 z-0"
-        />
-        <Image
-          src={imageString}
-          alt={`${title} album cover`}
-          width={262}
-          height={262}
-          className="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        />
+        <div className="md:size-[276px] size-[180px]">
+          <Image
+            src={imageString}
+            alt={`${title} album cover`}
+            fill
+            sizes="(max-width: 768px) 164px, 276px"
+            className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
+          />
+        </div>
+        <div className="md:size-[262px] size-[162px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Image
+            src={imageString}
+            alt={`${title} album cover`}
+            fill
+            sizes="(max-width: 768px) 148px, 262px"
+            className="z-10"
+          />
+        </div>
       </div>
-      <div className="flex flex-col gap-2 px-4">
-        <h2 className="font-sans text-2xl font-semibold text-center">
+      <div className="flex flex-col gap-1 md:gap-2 px-4">
+        <h2 className="font-sans md:text-2xl text-xl font-semibold text-center">
           {title}
         </h2>
-        <p className="w-full font-sans text-white font-light text-base text-center">
+        <p className="w-full font-sans text-white font-light md:text-base text-sm text-center">
           {artist} &#183; {year}
         </p>
       </div>

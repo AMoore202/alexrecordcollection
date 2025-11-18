@@ -33,7 +33,10 @@ export default function MobileMenu() {
   }, [isOpen]);
 
   return (
-    <div className="relative flex 2xl:hidden w-full justify-between bg-[#151414] border-b border-white/5 p-4 items-center">
+    <div
+      ref={popoverRef}
+      className="relative flex 2xl:hidden w-full justify-between bg-[#151414] border-b border-white/5 p-4 items-center"
+    >
       <h1 className="font-title text-white text-4xl/[48px]">My Collection</h1>
       <button
         onClick={handleMenuToggle}
@@ -43,14 +46,14 @@ export default function MobileMenu() {
       </button>
       <div
         className={clsx(
-          "absolute right-4 w-[250px] bg-[#151414] z-10 flex flex-col items-center border border-white/5 rounded-2xl shadow-lg transition-all duration-200 ease-out",
+          "absolute top-20 right-4 w-[250px] bg-[#151414] z-10 flex flex-col items-center border border-white/5 rounded-2xl shadow-lg transition-all duration-200 origin-top ease-out",
           {
-            "opacity-100 top-20 scale-100": isOpen,
-            "opacity-0 top-18 scale-95": !isOpen,
+            "opacity-100 scale-100 pointer-events-auto": isOpen,
+            "opacity-0 scale-96 -translate-y-1 pointer-events-none": !isOpen,
           }
         )}
       >
-        <div ref={popoverRef} className="flex flex-col w-full gap-1 p-2">
+        <div className="flex flex-col w-full gap-1 p-2">
           <MenuLink
             href="https://github.com/AMoore202/alexrecordcollection"
             newTab
