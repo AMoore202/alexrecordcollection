@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { RecordResultProps } from "../../utils/types";
 
@@ -8,7 +9,10 @@ export default function RecordResult({
   year,
 }: RecordResultProps) {
   return (
-    <div className="flex flex-col items-center gap-3 w-[180px] md:w-[294px]">
+    <motion.div
+      layoutId={title}
+      className="flex flex-col items-center gap-3 w-[180px] md:w-[294px]"
+    >
       <div className="relative">
         <div className="md:size-[276px] size-[180px]">
           <Image
@@ -37,6 +41,6 @@ export default function RecordResult({
           {artist} &#183; {year}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
