@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { RecordResultProps } from "../../utils/types";
+import useMeasure from "react-use-measure";
 
 export default function RecordResult({
   imageString,
@@ -8,38 +9,48 @@ export default function RecordResult({
   artist,
   year,
 }: RecordResultProps) {
+  const [ref, bounds] = useMeasure();
+
   return (
     <motion.div
-      layoutId={title}
-      className="flex flex-col items-center gap-3 w-[180px] md:w-[294px]"
+      layout="position"
+      style={{ height: bounds.height }}
+      className="md:min-h-[352px] min-h-[236px]"
+      initial={{ opacity: 0, filter: "blur(5px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)", transition: { delay: 0.3 } }}
     >
-      <div className="relative">
-        <div className="md:size-[276px] size-[180px]">
-          <Image
-            src={imageString}
-            alt={`${title} album cover`}
-            fill
-            sizes="(max-width: 768px) 164px, 276px"
-            className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
-          />
+      <div
+        ref={ref}
+        className="flex flex-col items-center md:gap-3 gap-1 w-[180px] md:w-[294px]"
+      >
+        <div className="relative">
+          <div className="md:size-[276px] size-[180px] aspect-square">
+            <Image
+              src={imageString}
+              alt={`${title} album cover`}
+              fill
+              sizes="(max-width: 768px) 164px, 276px"
+              className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
+            />
+          </div>
+          <div className="md:size-[262px] size-[162px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square">
+            <Image
+              src={imageString}
+              alt={`${title} album cover`}
+              fill
+              sizes="(max-width: 768px) 148px, 262px"
+              className="z-10"
+            />
+          </div>
         </div>
-        <div className="md:size-[262px] size-[162px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Image
-            src={imageString}
-            alt={`${title} album cover`}
-            fill
-            sizes="(max-width: 768px) 148px, 262px"
-            className="z-10"
-          />
+        <div className="flex flex-col gap-1 md:gap-2 px-4">
+          <h2 className="font-sans md:text-2xl text-xl font-semibold text-center">
+            {title}
+          </h2>
+          <p className="w-full font-sans text-white font-light md:text-base text-sm text-center">
+            {artist} &#183; {year}
+          </p>
         </div>
-      </div>
-      <div className="flex flex-col gap-1 md:gap-2 px-4">
-        <h2 className="font-sans md:text-2xl text-xl font-semibold text-center">
-          {title}
-        </h2>
-        <p className="w-full font-sans text-white font-light md:text-base text-sm text-center">
-          {artist} &#183; {year}
-        </p>
       </div>
     </motion.div>
   );

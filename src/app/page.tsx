@@ -58,8 +58,8 @@ export default function Home() {
     <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0">
-        <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4">
+      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
+        <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4 min-h-0">
           <FilterBar
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
@@ -90,16 +90,18 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 justify-items-center flex-1 overflow-y-auto scrollbar-hide pt-2">
-              {sortedRecords.map((record) => (
-                <RecordResult
-                  key={record.id}
-                  imageString={record.imageString}
-                  title={record.title}
-                  artist={record.artist}
-                  year={record.year}
-                />
-              ))}
+            <div className="overflow-y-auto scrollbar-hide pt-2 flex-1 min-h-0">
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4 justify-items-center pb-10">
+                {sortedRecords.map((record) => (
+                  <RecordResult
+                    key={record.id}
+                    imageString={record.imageString}
+                    title={record.title}
+                    artist={record.artist}
+                    year={record.year}
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>
