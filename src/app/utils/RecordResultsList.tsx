@@ -26,7 +26,7 @@ export const recordResultsList: RecordResultProps[] = [
           { number: "03", title: "Lit Up" },
           { number: "04", title: "Looking for Astronauts" },
           { number: "05", title: "Daughters of the Soho Riots" },
-          { number: "06", title: "Baby, We&apos;ll Be Fine" },
+          { number: "06", title: "Baby, We'll Be Fine" },
           { number: "07", title: "Friend of Mine" },
         ],
       },

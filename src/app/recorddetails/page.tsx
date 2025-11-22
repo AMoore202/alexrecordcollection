@@ -15,7 +15,7 @@ export default function RecordDetailsPage() {
     <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5">
+      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 overflow-y-scroll">
         <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">
           <div className="flex items-center gap-12">
             <div className="flex items-center w-1/2">
@@ -44,7 +44,7 @@ export default function RecordDetailsPage() {
               highlightColor={albumData.recordHighlightColour || ""}
             />
           </div>
-          <div className="flex gap-8">
+          <div className="grid grid-cols-2 gap-8 pb-8">
             {albumData.sides?.map((side) => (
               <TrackListSide
                 key={side.side}
