@@ -41,6 +41,15 @@ export default function Description({
   description,
   highlightColor,
 }: DescriptionProps) {
+  const recordNumberString =
+    recordNumber === 1
+      ? "debut"
+      : recordNumber === 2
+      ? "2nd"
+      : recordNumber === 3
+      ? "3rd"
+      : `${recordNumber}th`;
+
   return (
     <div className="flex flex-col gap-5 w-1/2">
       <div className="flex flex-col gap-2">
@@ -51,7 +60,7 @@ export default function Description({
           <span className="font-light text-white ml-2">by {artist}</span>
         </h2>
         <p className="font-sans text-white/75 text-lg">
-          Released in {year} as their {recordNumber} record
+          Released in {year} as their {recordNumberString} record
         </p>
       </div>
       <div className="flex gap-4">
