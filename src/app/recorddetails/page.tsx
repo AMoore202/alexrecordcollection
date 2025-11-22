@@ -7,6 +7,7 @@ import Record from "../components/ui/RecordDetails/Record";
 import Description from "../components/ui/RecordDetails/Description";
 import TrackListSide from "../components/ui/RecordDetails/TrackListSide";
 import { recordResultsList } from "../utils/RecordResultsList";
+import { CloseIcon } from "../components/ui/Icons";
 
 export default function RecordDetailsPage() {
   const albumData = recordResultsList[0];
@@ -15,7 +16,10 @@ export default function RecordDetailsPage() {
     <div className="relative flex 2xl:flex-row flex-col">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 overflow-y-scroll">
+      <button className="absolute top-6 right-10 flex items-center z-20 p-2 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer">
+        <CloseIcon className="text-[#C4C4C4] size-10" />
+      </button>
+      <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
         <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">
           <div className="flex items-center gap-12">
             <div className="flex items-center w-1/2">
