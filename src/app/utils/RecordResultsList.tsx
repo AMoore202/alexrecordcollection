@@ -7,6 +7,41 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The National",
     year: "2005",
     imageString: "/alligator.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#AAC93F",
+    innerColour: "#1A1919",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf, Bryan Devendorf",
+    description:
+      "Breakout album for a band that just keeps producing - absolute classic",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Secret Meeting" },
+          { number: "02", title: "Karen" },
+          { number: "03", title: "Lit Up" },
+          { number: "04", title: "Looking for Astronauts" },
+          { number: "05", title: "Daughters of the Soho Riots" },
+          { number: "06", title: "Baby, We'll Be Fine" },
+          { number: "07", title: "Friend of Mine" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "08", title: "Val Jester" },
+          { number: "09", title: "All the Wine" },
+          { number: "10", title: "Abel" },
+          { number: "11", title: "The Geese of Beverly Road" },
+          { number: "12", title: "City Middle" },
+          { number: "13", title: "Mr. November" },
+        ],
+      },
+    ],
   },
   {
     id: 2,
