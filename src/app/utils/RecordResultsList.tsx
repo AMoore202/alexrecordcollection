@@ -288,6 +288,39 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Hootie & the Blowfish",
     year: "1994",
     imageString: "/crackedRearView.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#252323",
+    recordHighlightColour: "#C13D48",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Darius Rucker, Mark Bryan, Dean Felber, Jim Sonefeld",
+    description:
+      "Absolutely timeless album that will have you dancing to every track",
+    recordNumber: 1,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Hannah Jane" },
+          { number: "02", title: "Hold My Hand" },
+          { number: "03", title: "Let Her Cry" },
+          { number: "04", title: "Only Wanna Be with You" },
+          { number: "05", title: "Running from an Angel" },
+          { number: "06", title: "I'm Goin' Home" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Drowning" },
+          { number: "08", title: "Time" },
+          { number: "09", title: "Look Away" },
+          { number: "10", title: "Not Even the Trees" },
+          { number: "11", title: "Goodbye" },
+        ],
+      },
+    ],
   },
   {
     id: 32,
