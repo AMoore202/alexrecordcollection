@@ -20,7 +20,7 @@ export default function RecordDetailsPage() {
         <CloseIcon className="text-[#C4C4C4] size-10" />
       </button>
       <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
-        <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">
+        <div className="w-full max-w-[1360px] flex flex-col xl:gap-10 gap-4 h-full px-4">
           <div className="flex items-center gap-12">
             <div className="flex items-center w-1/2">
               <div className="size-[320px] aspect-square relative mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
