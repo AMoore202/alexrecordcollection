@@ -10,7 +10,7 @@ import { recordResultsList } from "../utils/RecordResultsList";
 import { CloseIcon } from "../components/ui/Icons";
 
 export default function RecordDetailsPage() {
-  const albumData = recordResultsList[0];
+  const albumData = recordResultsList[45];
 
   return (
     <div className="relative flex 2xl:flex-row flex-col">
@@ -33,6 +33,7 @@ export default function RecordDetailsPage() {
               <Record
                 colour={albumData.recordColour || ""}
                 innerColour={albumData.innerColour || ""}
+                lineColour={albumData.recordLineColour || "white"}
               />
             </div>
             <Description

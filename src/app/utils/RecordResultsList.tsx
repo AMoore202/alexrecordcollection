@@ -11,6 +11,7 @@ export const recordResultsList: RecordResultProps[] = [
     recordColourDescription: "Classic Black",
     recordHighlightColour: "#AAC93F",
     innerColour: "#1A1919",
+    recordLineColour: "white",
     speed: "33 ⅓ RPM",
     musicians:
       "Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf, Bryan Devendorf",
@@ -49,6 +50,41 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "I, the Mountain",
     year: "2025",
     imageString: "/wildflowers.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#128287",
+    innerColour: "#FDD5AF",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Allison Dyjach, Matthew Lamers, Matthew Rappolt, Rory McLachlin",
+    description:
+      "A fun and colourful album from the Kitchener based teacher collective",
+    recordNumber: 2,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Walls" },
+          { number: "02", title: "Wildflowers" },
+          { number: "03", title: "Carry On" },
+          { number: "04", title: "{Don't Look Back}" },
+          { number: "05", title: "Jillian" },
+          { number: "06", title: "Wildfire" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Fade Away" },
+          { number: "08", title: "Houseplant" },
+          { number: "09", title: "Summer" },
+          { number: "10", title: "Kings of Love" },
+          { number: "11", title: "{She Went Away}" },
+          { number: "12", title: "Coal Mine" },
+        ],
+      },
+    ],
   },
   {
     id: 3,
@@ -357,5 +393,38 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The Beaches",
     year: "2025",
     imageString: "/noHardFeelings.jpg",
+    recordColour: "#DDE7EE",
+    recordColourDescription: "Mystic Blue Waves",
+    recordHighlightColour: "#E4E7EE",
+    innerColour: "#1A141F",
+    recordLineColour: "black",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Jordan Miller, Kylie Miller, Leandra Earl, Eliza Enman-McDaniel",
+    description: "Loud and proud rock album from Toronto's finest",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Can I Call You in the Morning?" },
+          { number: "02", title: "Did I Say Too Much" },
+          { number: "03", title: "Sorry For Your Loss" },
+          { number: "04", title: "Touch Myself" },
+          { number: "05", title: "Fine, Let's Get Married" },
+          { number: "06", title: "Takes One to Know One" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "I Wore You Better" },
+          { number: "08", title: "Dirty Laundry" },
+          { number: "09", title: "Lesbian of the Year" },
+          { number: "10", title: "Jocelyn" },
+          { number: "11", title: "Last Girls at the Party" },
+        ],
+      },
+    ],
   },
 ];
