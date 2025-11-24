@@ -10,7 +10,7 @@ import { recordResultsList } from "../utils/RecordResultsList";
 import { CloseIcon } from "../components/ui/Icons";
 
 export default function RecordDetailsPage() {
-  const albumData = recordResultsList[30];
+  const albumData = recordResultsList[2];
 
   return (
     <div className="relative flex 2xl:flex-row flex-col">
@@ -20,7 +20,7 @@ export default function RecordDetailsPage() {
         <CloseIcon className="text-[#C4C4C4] size-10" />
       </button>
       <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
-        <div className="w-full max-w-[1350px] flex flex-col xl:gap-10 gap-4 h-full px-4">
+        <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">
           <div className="flex items-center gap-12">
             <div className="flex items-center w-1/2">
               <div className="size-[320px] aspect-square relative mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
