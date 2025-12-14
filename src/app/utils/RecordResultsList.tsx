@@ -355,6 +355,42 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Bon Iver",
     year: "2019",
     imageString: "/icommai.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#D94A28",
+    innerColour: "#CFCFC5",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Justin Vernon, Sean Carey, Matt McCaughan, Andrew Fitzpatrick, Mike Lewis",
+    description:
+      "A massive undertaking, this album pushes the Bon Iver style to its peak",
+    recordNumber: 4,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Yi" },
+          { number: "02", title: "iMi" },
+          { number: "03", title: "We" },
+          { number: "04", title: "Holyfields" },
+          { number: "05", title: "Hey, Ma" },
+          { number: "06", title: "U (Man Like)" },
+          { number: "07", title: "Naeem" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "08", title: "Jelmore" },
+          { number: "09", title: "Faith" },
+          { number: "10", title: "Marion" },
+          { number: "11", title: "Salem" },
+          { number: "12", title: "Sh'Diah" },
+          { number: "13", title: "RABi" },
+        ],
+      },
+    ],
   },
   {
     id: 10,
@@ -362,6 +398,39 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Bon Iver",
     year: "2011",
     imageString: "/bonIverBonIver.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#CB2D2F",
+    recordHighlightColour: "#838755",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Mike Lewis, Colin Stetson, Mikey Noyce, Rob Moose, Justin Vernon, Matt McCaughan, Tom Winceck, Greg Leisz, Brian Joseph, Jim Shoemaker, CJ Camerieri",
+    description:
+      "Musically rich this album builds a rich nature filled world to get lost in",
+    recordNumber: 2,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Perth" },
+          { number: "02", title: "Minnesota, WI" },
+          { number: "03", title: "Holocene" },
+          { number: "04", title: "Towers" },
+          { number: "05", title: "Michicant" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Hinnom, TX" },
+          { number: "07", title: "Wash." },
+          { number: "08", title: "Calgary" },
+          { number: "09", title: "Lisbon, OH" },
+          { number: "10", title: "Beth/Rest" },
+        ],
+      },
+    ],
   },
   {
     id: 11,
@@ -369,6 +438,40 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Brian Fallon",
     year: "2016",
     imageString: "/painkillers.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#E6DFD3",
+    recordHighlightColour: "#60B2D8",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Brian Fallon",
+    description:
+      "An accoustic break from the Gaslight Anthem, this album showcases Fallon's songwriting in a more relaxed setting",
+    recordNumber: 1,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "A Wonderful Life" },
+          { number: "02", title: "Painkillers" },
+          { number: "03", title: "Among Other Foolish Things" },
+          { number: "04", title: "Smoke" },
+          { number: "05", title: "Steve McQueen" },
+          { number: "06", title: "Nobody Wins" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Rosemary" },
+          { number: "08", title: "Red Lights" },
+          { number: "09", title: "Long Drives" },
+          { number: "10", title: "Honey Magnolia" },
+          { number: "11", title: "Mojo Hand" },
+          { number: "12", title: "Open All Night" },
+        ],
+      },
+    ],
   },
   {
     id: 12,
@@ -376,6 +479,38 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Brandi Carlile",
     year: "2021",
     imageString: "/inTheseSilentDays.png",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#005894",
+    recordHighlightColour: "#16BEE0",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Brandi Carlile, Phil Hanseroth, Tim Hanseroth",
+    description:
+      "A powerful and emotional album that shows why Carlile is one of the best",
+    recordNumber: 7,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Right on Time" },
+          { number: "02", title: "You and Me on the Rock" },
+          { number: "03", title: "This Time Tomorrow" },
+          { number: "04", title: "Broken Horses" },
+          { number: "05", title: "Letter to the Past" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Mama Werewolf" },
+          { number: "07", title: "When You're Wrong" },
+          { number: "08", title: "Stay Gentle" },
+          { number: "09", title: "Sinners Saints and Fools" },
+          { number: "10", title: "Throwing Good After Bad" },
+        ],
+      },
+    ],
   },
   {
     id: 13,

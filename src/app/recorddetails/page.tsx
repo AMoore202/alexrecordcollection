@@ -10,7 +10,7 @@ import { recordResultsList } from "../utils/RecordResultsList";
 import { CloseIcon } from "../components/ui/Icons";
 
 export default function RecordDetailsPage() {
-  const albumData = recordResultsList[2];
+  const albumData = recordResultsList[11];
 
   return (
     <div className="relative flex 2xl:flex-row flex-col">
