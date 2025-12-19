@@ -11,6 +11,7 @@ export const recordResultsList: RecordResultProps[] = [
     recordColourDescription: "Classic Black",
     recordHighlightColour: "#AAC93F",
     innerColour: "#1A1919",
+    recordLineColour: "white",
     speed: "33 ⅓ RPM",
     musicians:
       "Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf, Bryan Devendorf",
@@ -49,6 +50,41 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "I, the Mountain",
     year: "2025",
     imageString: "/wildflowers.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#128287",
+    innerColour: "#FDD5AF",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Allison Dyjach, Matthew Lamers, Matthew Rappolt, Rory McLachlin",
+    description:
+      "A fun and colourful album from the Kitchener based teacher collective",
+    recordNumber: 2,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Walls" },
+          { number: "02", title: "Wildflowers" },
+          { number: "03", title: "Carry On" },
+          { number: "04", title: "{Don't Look Back}" },
+          { number: "05", title: "Jillian" },
+          { number: "06", title: "Wildfire" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Fade Away" },
+          { number: "08", title: "Houseplant" },
+          { number: "09", title: "Summer" },
+          { number: "10", title: "Kings of Love" },
+          { number: "11", title: "{She Went Away}" },
+          { number: "12", title: "Coal Mine" },
+        ],
+      },
+    ],
   },
   {
     id: 3,
@@ -56,6 +92,43 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The Beatles",
     year: "1969",
     imageString: "/abbeyRoad.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#252323",
+    recordHighlightColour: "#B6DBFE",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "John Lennon, Paul McCartney, George Harrison, Ringo Starr",
+    description: "Iconic, timeless",
+    recordNumber: 12,
+    sides: [
+      {
+        side: "1",
+        tracks: [
+          { number: "01", title: "Come Together" },
+          { number: "02", title: "Something" },
+          { number: "03", title: "Maxwell's Silver Hammer" },
+          { number: "04", title: "Oh! Darling" },
+          { number: "05", title: "Octopus's Garden" },
+          { number: "06", title: "I Want You (She's So Heavy)" },
+        ],
+      },
+      {
+        side: "2",
+        tracks: [
+          { number: "07", title: "Here Comes the Sun" },
+          { number: "08", title: "Because" },
+          { number: "09", title: "You Never Give Me Your Money" },
+          { number: "10", title: "Sun King" },
+          { number: "11", title: "Mean Mr. Mustard" },
+          { number: "12", title: "Polythene Pam" },
+          { number: "13", title: "She Came In Through the Bathroom Window" },
+          { number: "14", title: "Golden Slumbers" },
+          { number: "15", title: "Carry That Weight" },
+          { number: "16", title: "The End" },
+        ],
+      },
+    ],
   },
   {
     id: 4,
@@ -63,6 +136,45 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Caamp",
     year: "2019",
     imageString: "/byAndBy.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#D1C4B3",
+    innerColour: "#D1C4B3",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Taylor Meier, Evan Westfall, Matt Vinson",
+    description:
+      "An heartfelt collection of folk melodies that showcase Caamp's signature sound",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Feels Like Home" },
+          { number: "02", title: "Keep the Blues Away" },
+          { number: "03", title: "No Sleep" },
+          { number: "04", title: "Peach Fuzz" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "05", title: "Wolf Song" },
+          { number: "06", title: "Penny, Heads Up" },
+          { number: "07", title: "Wunderbar" },
+          { number: "08", title: "On & On & On" },
+        ],
+      },
+      {
+        side: "C",
+        tracks: [
+          { number: "09", title: "Moonsmoke" },
+          { number: "10", title: "Huckleberry Love" },
+          { number: "11", title: "By and By" },
+          { number: "12", title: "Of Love and Life" },
+        ],
+      },
+    ],
   },
   {
     id: 5,
@@ -70,6 +182,40 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Nathaniel Rateliff & The Night Sweats",
     year: "2024",
     imageString: "/southOfHere.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#9487BF",
+    innerColour: "#F7C13C",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Nathaniel Rateliff, Joseph Pope III, Luke Mossman, Mark Shusterman, Patrick Meese",
+    description:
+      "Written about a trip to Sonic Ranch to record the album, this record is a showcase of Rateliff's incredible songwriting talent",
+    recordNumber: 4,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "David and Golaith" },
+          { number: "02", title: "Heartless" },
+          { number: "03", title: "Remember I Was a Dancer" },
+          { number: "04", title: "Get Used to the Night" },
+          { number: "05", title: "South of Here" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Everybody Wants Something" },
+          { number: "07", title: "Center of Me" },
+          { number: "08", title: "Cars in the Desert" },
+          { number: "09", title: "I Would Like to Heal" },
+          { number: "10", title: "Call Me (Whatever You Like)" },
+          { number: "11", title: "Time Makes Fools Of Us All" },
+        ],
+      },
+    ],
   },
   {
     id: 6,
@@ -77,6 +223,40 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Taylor Swift",
     year: "2022",
     imageString: "/midnights.png",
+    recordColour: "#173437",
+    recordColourDescription: "Midnight Green",
+    recordHighlightColour: "#729AAF",
+    innerColour: "#EDEDEC",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Taylor Swift",
+    description: "An effortless pop album from the master lyricist",
+    recordNumber: 10,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Lavender Haze" },
+          { number: "02", title: "Maroon" },
+          { number: "03", title: "Anti-Hero" },
+          { number: "04", title: "Snow on the Beach (Feat. Lana Del Ray)" },
+          { number: "05", title: "You're on Your Own, Kid" },
+          { number: "06", title: "Midnight Rain" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Question...?" },
+          { number: "08", title: "Vigilante Shit" },
+          { number: "09", title: "Bejeweled" },
+          { number: "10", title: "Labyrinth" },
+          { number: "11", title: "Karma" },
+          { number: "12", title: "Sweet Nothing" },
+          { number: "13", title: "Mastermind" },
+        ],
+      },
+    ],
   },
   {
     id: 7,
@@ -84,6 +264,40 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The National",
     year: "2023",
     imageString: "/firstTwoPagesOfFrankenstein.jpg",
+    recordColour: "#B00D3E",
+    recordColourDescription: "Cherry Red",
+    recordHighlightColour: "#D0B8C8",
+    innerColour: "#DEDEDB",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf, Bryan Devendorf",
+    description:
+      "Post-hiatus The National come back to prove why they are the indie rock kings",
+    recordNumber: 9,
+    sides: [
+      {
+        side: "1",
+        tracks: [
+          { number: "01", title: "Once Upon a Poolside" },
+          { number: "02", title: "Eucalyptus" },
+          { number: "03", title: "New Order T-Shirt" },
+          { number: "04", title: "This Isn't Helping" },
+          { number: "05", title: "Tropic Morning News" },
+          { number: "06", title: "Alien" },
+        ],
+      },
+      {
+        side: "2",
+        tracks: [
+          { number: "07", title: "The Alcott" },
+          { number: "08", title: "Grease in your Hair" },
+          { number: "09", title: "Ice Machine" },
+          { number: "10", title: "Your Mind Is Not Your Friend" },
+          { number: "11", title: "Send for Me" },
+        ],
+      },
+    ],
   },
   {
     id: 8,
@@ -91,6 +305,49 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Blue Rodeo",
     year: "1993",
     imageString: "/fiveDaysInJuly.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#EC4F85",
+    innerColour: "#3F375C",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Jim Cuddy, Greg Keelor, Bazil Donovan, Cleave Anderson",
+    description:
+      "A perfect blend of country and rock from one of Canada's greatest bands",
+    recordNumber: 5,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "5 Days in May" },
+          { number: "02", title: "Hasn't Hit Me Yet" },
+          { number: "03", title: "Bad Timing" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "04", title: "Cynthia" },
+          { number: "05", title: "Photographs" },
+          { number: "06", title: "What Is This Love" },
+        ],
+      },
+      {
+        side: "C",
+        tracks: [
+          { number: "07", title: "English Bay" },
+          { number: "08", title: "Head Over Heels" },
+          { number: "09", title: "Til I Gain Control Again" },
+        ],
+      },
+      {
+        side: "D",
+        tracks: [
+          { number: "10", title: "Dark Angel" },
+          { number: "11", title: "Kmow Where You Go/Tell Me Your Dream" },
+        ],
+      },
+    ],
   },
   {
     id: 9,
@@ -98,6 +355,42 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Bon Iver",
     year: "2019",
     imageString: "/icommai.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#D94A28",
+    innerColour: "#CFCFC5",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Justin Vernon, Sean Carey, Matt McCaughan, Andrew Fitzpatrick, Mike Lewis",
+    description:
+      "A massive undertaking, this album pushes the Bon Iver style to its peak",
+    recordNumber: 4,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Yi" },
+          { number: "02", title: "iMi" },
+          { number: "03", title: "We" },
+          { number: "04", title: "Holyfields" },
+          { number: "05", title: "Hey, Ma" },
+          { number: "06", title: "U (Man Like)" },
+          { number: "07", title: "Naeem" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "08", title: "Jelmore" },
+          { number: "09", title: "Faith" },
+          { number: "10", title: "Marion" },
+          { number: "11", title: "Salem" },
+          { number: "12", title: "Sh'Diah" },
+          { number: "13", title: "RABi" },
+        ],
+      },
+    ],
   },
   {
     id: 10,
@@ -105,6 +398,39 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Bon Iver",
     year: "2011",
     imageString: "/bonIverBonIver.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#CB2D2F",
+    recordHighlightColour: "#838755",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Mike Lewis, Colin Stetson, Mikey Noyce, Rob Moose, Justin Vernon, Matt McCaughan, Tom Winceck, Greg Leisz, Brian Joseph, Jim Shoemaker, CJ Camerieri",
+    description:
+      "Musically rich this album builds a rich nature filled world to get lost in",
+    recordNumber: 2,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Perth" },
+          { number: "02", title: "Minnesota, WI" },
+          { number: "03", title: "Holocene" },
+          { number: "04", title: "Towers" },
+          { number: "05", title: "Michicant" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Hinnom, TX" },
+          { number: "07", title: "Wash." },
+          { number: "08", title: "Calgary" },
+          { number: "09", title: "Lisbon, OH" },
+          { number: "10", title: "Beth/Rest" },
+        ],
+      },
+    ],
   },
   {
     id: 11,
@@ -112,6 +438,40 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Brian Fallon",
     year: "2016",
     imageString: "/painkillers.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#E6DFD3",
+    recordHighlightColour: "#60B2D8",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Brian Fallon",
+    description:
+      "An accoustic break from the Gaslight Anthem, this album showcases Fallon's songwriting in a more relaxed setting",
+    recordNumber: 1,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "A Wonderful Life" },
+          { number: "02", title: "Painkillers" },
+          { number: "03", title: "Among Other Foolish Things" },
+          { number: "04", title: "Smoke" },
+          { number: "05", title: "Steve McQueen" },
+          { number: "06", title: "Nobody Wins" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Rosemary" },
+          { number: "08", title: "Red Lights" },
+          { number: "09", title: "Long Drives" },
+          { number: "10", title: "Honey Magnolia" },
+          { number: "11", title: "Mojo Hand" },
+          { number: "12", title: "Open All Night" },
+        ],
+      },
+    ],
   },
   {
     id: 12,
@@ -119,6 +479,38 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Brandi Carlile",
     year: "2021",
     imageString: "/inTheseSilentDays.png",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#005894",
+    recordHighlightColour: "#16BEE0",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Brandi Carlile, Phil Hanseroth, Tim Hanseroth",
+    description:
+      "A powerful and emotional album that shows why Carlile is one of the best",
+    recordNumber: 7,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Right on Time" },
+          { number: "02", title: "You and Me on the Rock" },
+          { number: "03", title: "This Time Tomorrow" },
+          { number: "04", title: "Broken Horses" },
+          { number: "05", title: "Letter to the Past" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Mama Werewolf" },
+          { number: "07", title: "When You're Wrong" },
+          { number: "08", title: "Stay Gentle" },
+          { number: "09", title: "Sinners Saints and Fools" },
+          { number: "10", title: "Throwing Good After Bad" },
+        ],
+      },
+    ],
   },
   {
     id: 13,
@@ -161,6 +553,41 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The National",
     year: "2007",
     imageString: "/boxer.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#FDF202",
+    innerColour: "#252323",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf, Bryan Devendorf",
+    description:
+      "Big and brooding, this album is relentless in its emotional depth and sonic beauty",
+    recordNumber: 4,
+    sides: [
+      {
+        side: "1",
+        tracks: [
+          { number: "01", title: "Fake Empire" },
+          { number: "02", title: "Mistaken for Strangers" },
+          { number: "03", title: "Brainy" },
+          { number: "04", title: "Squalor Victoria" },
+          { number: "05", title: "Green Gloves" },
+          { number: "06", title: "Slow Show" },
+        ],
+      },
+      {
+        side: "2",
+        tracks: [
+          { number: "07", title: "Apartment Story" },
+          { number: "08", title: "Start a War" },
+          { number: "09", title: "Guest Room" },
+          { number: "10", title: "Racing Like a Pro" },
+          { number: "11", title: "Ada" },
+          { number: "12", title: "Gospel" },
+        ],
+      },
+    ],
   },
   {
     id: 19,
@@ -175,6 +602,82 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Zach Bryan",
     year: "2022",
     imageString: "/americanHeartbreak.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#9D8369",
+    innerColour: "#F4F4DE",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Zach Bryan ",
+    description:
+      "Expansive album with a big country sound and heartfelt lyrics",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Late July" },
+          { number: "02", title: "Something in the Orange Z&E" },
+          { number: "03", title: "Heavy Eyes" },
+          { number: "04", title: "Mine Again" },
+          { number: "05", title: "Happy Instead" },
+          { number: "06", title: "Right Now the Best" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "The Outskirts" },
+          { number: "08", title: "Younger Years" },
+          { number: "09", title: "Cold Damn Vampires" },
+          { number: "10", title: "Tishomingo" },
+          { number: "11", title: "She's Alright" },
+          { number: "12", title: "You are My Sunshine" },
+        ],
+      },
+      {
+        side: "C",
+        tracks: [
+          { number: "13", title: "Darling" },
+          { number: "14", title: "Ninth Cloud" },
+          { number: "15", title: "Oklahoma City" },
+          { number: "16", title: "Sun to Me" },
+          { number: "17", title: "Highway Boys" },
+          { number: "18", title: "Whiskey Fever" },
+        ],
+      },
+      {
+        side: "D",
+        tracks: [
+          { number: "19", title: "Billy Stay" },
+          { number: "20", title: "Sober Side of Sorry" },
+          { number: "21", title: "High Beams" },
+          { number: "22", title: "The Good I'll Do" },
+          { number: "23", title: "Someday (Maggie's)" },
+        ],
+      },
+      {
+        side: "E",
+        tracks: [
+          { number: "24", title: "Poems and Closing Time" },
+          { number: "25", title: "From Austin" },
+          { number: "26", title: "If She Wants a Cowboy" },
+          { number: "27", title: "Corinthians (Proctor's)" },
+          { number: "28", title: "Open the Gates" },
+          { number: "29", title: "Half Grown" },
+        ],
+      },
+      {
+        side: "F",
+        tracks: [
+          { number: "30", title: "No Cure" },
+          { number: "31", title: "'68 Fastback" },
+          { number: "32", title: "Blue" },
+          { number: "33", title: "Morning Time" },
+          { number: "34", title: "This Road I Know" },
+        ],
+      },
+    ],
   },
   {
     id: 21,
@@ -252,6 +755,39 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Hootie & the Blowfish",
     year: "1994",
     imageString: "/crackedRearView.jpg",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    innerColour: "#252323",
+    recordHighlightColour: "#C13D48",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Darius Rucker, Mark Bryan, Dean Felber, Jim Sonefeld",
+    description:
+      "Absolutely timeless album that will have you dancing to every track",
+    recordNumber: 1,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Hannah Jane" },
+          { number: "02", title: "Hold My Hand" },
+          { number: "03", title: "Let Her Cry" },
+          { number: "04", title: "Only Wanna Be with You" },
+          { number: "05", title: "Running from an Angel" },
+          { number: "06", title: "I'm Goin' Home" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "Drowning" },
+          { number: "08", title: "Time" },
+          { number: "09", title: "Look Away" },
+          { number: "10", title: "Not Even the Trees" },
+          { number: "11", title: "Goodbye" },
+        ],
+      },
+    ],
   },
   {
     id: 32,
@@ -357,5 +893,38 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "The Beaches",
     year: "2025",
     imageString: "/noHardFeelings.jpg",
+    recordColour: "#DDE7EE",
+    recordColourDescription: "Mystic Blue Waves",
+    recordHighlightColour: "#E4E7EE",
+    innerColour: "#1A141F",
+    recordLineColour: "black",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Jordan Miller, Kylie Miller, Leandra Earl, Eliza Enman-McDaniel",
+    description: "Loud and proud rock album from Toronto's finest",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Can I Call You in the Morning?" },
+          { number: "02", title: "Did I Say Too Much" },
+          { number: "03", title: "Sorry For Your Loss" },
+          { number: "04", title: "Touch Myself" },
+          { number: "05", title: "Fine, Let's Get Married" },
+          { number: "06", title: "Takes One to Know One" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "07", title: "I Wore You Better" },
+          { number: "08", title: "Dirty Laundry" },
+          { number: "09", title: "Lesbian of the Year" },
+          { number: "10", title: "Jocelyn" },
+          { number: "11", title: "Last Girls at the Party" },
+        ],
+      },
+    ],
   },
 ];

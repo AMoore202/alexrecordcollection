@@ -3,20 +3,24 @@ import { clsx } from "clsx";
 interface RecordProps {
   colour: string;
   innerColour: string;
+  lineColour?: "white" | "black";
 }
 
 interface RingProps {
   children: React.ReactNode;
   last?: boolean;
+  lineColour?: "white" | "black";
 }
 
-function Ring({ children, last = false }: RingProps) {
+function Ring({ children, last = false, lineColour = "white" }: RingProps) {
   return (
     <div
       className={clsx(
-        "flex w-full h-full rounded-full border-[0.5px] p-0.5 border-white/10",
+        "flex w-full h-full rounded-full border-[0.5px] p-0.5",
         { "p-1.5": last },
-        { "p-0.5": !last }
+        { "p-0.5": !last },
+        { "border-black/10": lineColour === "black" },
+        { "border-white/10": lineColour === "white" }
       )}
     >
       {children}
@@ -24,15 +28,23 @@ function Ring({ children, last = false }: RingProps) {
   );
 }
 
-function SongRings({ children }: { children: React.ReactNode }) {
+function SongRings({
+  children,
+  lineColour = "white",
+}: {
+  children: React.ReactNode;
+  lineColour?: "white" | "black";
+}) {
   return (
-    <Ring>
-      <Ring>
-        <Ring>
-          <Ring>
-            <Ring>
-              <Ring>
-                <Ring last={true}>{children}</Ring>
+    <Ring lineColour={lineColour}>
+      <Ring lineColour={lineColour}>
+        <Ring lineColour={lineColour}>
+          <Ring lineColour={lineColour}>
+            <Ring lineColour={lineColour}>
+              <Ring lineColour={lineColour}>
+                <Ring lineColour={lineColour} last={true}>
+                  {children}
+                </Ring>
               </Ring>
             </Ring>
           </Ring>
@@ -42,16 +54,20 @@ function SongRings({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function Record({ colour, innerColour }: RecordProps) {
+export default function Record({
+  colour,
+  innerColour,
+  lineColour = "white",
+}: RecordProps) {
   return (
     <div
       style={{ backgroundColor: colour }}
       className="flex size-[310px] rounded-full p-2"
     >
-      <SongRings>
-        <SongRings>
-          <SongRings>
-            <SongRings>
+      <SongRings lineColour={lineColour}>
+        <SongRings lineColour={lineColour}>
+          <SongRings lineColour={lineColour}>
+            <SongRings lineColour={lineColour}>
               <div className="flex w-full h-full rounded-full p-1">
                 <div
                   style={{ backgroundColor: innerColour }}

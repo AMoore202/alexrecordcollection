@@ -27,6 +27,7 @@ export type RecordResultProps = {
   recordColourDescription?: string;
   recordHighlightColour?: string;
   innerColour?: string;
+  recordLineColour?: "white" | "black";
   speed?: "33 ⅓ RPM" | "45 RPM";
   musicians?: string;
   description?: string;
