@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex 2xl:flex-row flex-col">
+    <div className="relative flex 2xl:flex-row flex-col h-screen overflow-hidden">
       <DesktopMenu />
       <MobileMenu />
       <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
