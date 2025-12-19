@@ -25,7 +25,7 @@ export default function SortSelect({
   return (
     <div className="relative hidden md:flex items-center">
       <button
-        className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323] hover:cursor-pointer"
+        className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50 p-1 rounded-sm hover:bg-[#242323] hover:cursor-pointer focus-visible:ring-[2px] focus-visible:ring-ring/50 outline-none transition-all"
         onClick={handleSortOrderToggle}
       >
         {sortOrder === "asc" ? (

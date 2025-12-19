@@ -149,7 +149,7 @@ export default function FilterBar({
       </p>
       <div
         className={clsx(
-          "fixed z-50 left-0 top-0 h-screen w-full bg-black/50 flex flex-col justify-end backdrop-blur-xs transition-all duration-300",
+          "fixed z-50 left-0 top-0 h-screen w-full bg-black/50 flex flex-col justify-center p-4 backdrop-blur-xs transition-all duration-300",
           { "opacity-100 pointer-events-auto": drawerOpen },
           { "opacity-0 pointer-events-none": !drawerOpen }
         )}
@@ -157,7 +157,7 @@ export default function FilterBar({
         <div
           ref={popoverRef}
           className={clsx(
-            "z-60 w-full bg-[#151414] ring ring-white/25 rounded-t-3xl p-3 origin-bottom",
+            "z-60 w-full bg-[#151414] ring ring-white/10 rounded-xl p-3 origin-top transition-all",
             { "opacity-100 scale-100 pointer-events-auto": drawerOpen },
             {
               "opacity-0 scale-96 pointer-events-none duration-300":
