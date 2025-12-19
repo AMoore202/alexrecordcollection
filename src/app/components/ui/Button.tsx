@@ -10,7 +10,7 @@ export function Button({ href, children, className }: Readonly<ButtonProps>) {
   return (
     <Link
       href={href}
-      className={`flex items-center justify-center rounded-lg px-7 py-4 gap-3 text-sans text-base text-white font-sans font-medium bg-[#272525] hover:bg-[#201E1E] active:scale-98 transition-transform shadow-[0_0.5px_1px_0_rgba(255,255,255,0.05)_inset,0_8px_16px_-8px_rgba(0,0,0,0.15),0_2px_4px_-2px_rgba(0,0,0,0.15),0_4px_8px_-4px_rgba(0,0,0,0.15)] ${
+      className={`flex items-center justify-center rounded-lg px-7 py-4 gap-3 text-sans text-base text-white font-sans font-medium bg-[#272525] hover:bg-[#201E1E] active:scale-98 transition-transform focus-visible:ring-[3px] focus-visible:ring-ring/50 outline-none shadow-[0_0.5px_1px_0_rgba(255,255,255,0.05)_inset,0_8px_16px_-8px_rgba(0,0,0,0.15),0_2px_4px_-2px_rgba(0,0,0,0.15),0_4px_8px_-4px_rgba(0,0,0,0.15)] ${
         className ?? ""
       }`}
     >
