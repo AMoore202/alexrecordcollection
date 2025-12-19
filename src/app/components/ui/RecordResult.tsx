@@ -24,7 +24,7 @@ export default function RecordResult({
         className="flex flex-col items-center md:gap-3 gap-1 w-[180px] md:w-[294px]"
       >
         <div className="relative">
-          <div className="md:size-[276px] size-[180px] aspect-square">
+          <div className="md:size-[276px] sm:size-[180px] size-[160px] aspect-square">
             <Image
               src={imageString}
               alt={`${title} album cover`}
@@ -33,7 +33,7 @@ export default function RecordResult({
               className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
             />
           </div>
-          <div className="md:size-[262px] size-[162px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square">
+          <div className="md:size-[262px] sm:size-[162px] size-[148px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square">
             <Image
               src={imageString}
               alt={`${title} album cover`}
