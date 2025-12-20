@@ -1,6 +1,6 @@
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-sans text-sm text-white/50 font-bold">
+    <span className="font-sans text-xs lg:text-sm text-white/50 font-bold">
       {children}
     </span>
   );
@@ -8,7 +8,9 @@ function Label({ children }: { children: React.ReactNode }) {
 
 function Value({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-sans text-lg text-white font-medium">{children}</span>
+    <span className="font-sans text-md lg:text-lg text-white font-medium">
+      {children}
+    </span>
   );
 }
 
@@ -51,15 +53,15 @@ export default function Description({
       : `${recordNumber}th`;
 
   return (
-    <div className="flex flex-col gap-5 w-1/2">
+    <div className="flex flex-col gap-5 lg:w-1/2 w-full">
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-sans">
+        <h2 className="text-2xl lg:text-3xl font-sans">
           <span style={{ color: highlightColor }} className="font-bold">
             {title}
           </span>
           <span className="font-light text-white ml-2">by {artist}</span>
         </h2>
-        <p className="font-sans text-white/75 text-lg">
+        <p className="font-sans text-white/75 text-md lg:text-lg">
           Released in {year} as their {recordNumberString} record
         </p>
       </div>
