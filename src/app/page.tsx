@@ -22,7 +22,7 @@ function RecordCover({
   return (
     <motion.div
       layoutId={`image-${imageString}`}
-      transition={{ duration: 0.3, bounce: 0, type: "spring" }}
+      transition={{ duration: 0.5, bounce: 0, type: "spring" }}
       className="w-full h-full aspect-square"
     >
       <Image
