@@ -45,9 +45,14 @@ export default function RecordDetails({
               innerColour={albumData.innerColour || ""}
               lineColour={albumData.recordLineColour || "white"}
             />
-            <div className="absolute top-0 mr-[-120px] size-[200px] lg:size-[320px] aspect-square shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
+            <motion.div
+              initial={{ boxShadow: "4px 0 4px 0 rgba(0,0,0,0)" }}
+              animate={{ boxShadow: "4px 0 4px 0 rgba(0,0,0,0.25)" }}
+              transition={{ duration: 0.1, delay: 0.3 }}
+              className="absolute top-0 mr-[-120px] size-[200px] lg:size-[320px] aspect-square shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]"
+            >
               {albumCover}
-            </div>
+            </motion.div>
           </div>
           <Description
             artist={albumData.artist}
