@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import DesktopMenu from "./components/ui/DesktopMenu";
 import MobileMenu from "./components/ui/MobileMenu";
 import RecordResult from "./components/ui/RecordResult";
@@ -9,6 +11,30 @@ import { MailIcon } from "./components/ui/Icons";
 import { Button } from "./components/ui/Button";
 import FilterBar from "./components/ui/FilterBar";
 import RecordDetails from "./components/ui/RecordDetails/RecordDetails";
+
+function RecordCover({
+  imageString,
+  title,
+}: {
+  imageString: string;
+  title: string;
+}) {
+  return (
+    <motion.div
+      layoutId={`image-${imageString}`}
+      transition={{ duration: 0.5, bounce: 0, type: "spring" }}
+      className="w-full h-full aspect-square"
+    >
+      <Image
+        src={imageString}
+        alt={`${title} album cover`}
+        fill
+        sizes="(max-width: 768px) 148px, 262px"
+        className="z-10"
+      />
+    </motion.div>
+  );
+}
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -71,6 +97,20 @@ export default function Home() {
           <RecordDetails
             albumId={selectedAlbumId}
             onClose={() => setShowOverlay(false)}
+            albumCover={
+              <RecordCover
+                imageString={
+                  recordResultsList.find(
+                    (album) => album.id === selectedAlbumId
+                  )?.imageString || ""
+                }
+                title={
+                  recordResultsList.find(
+                    (album) => album.id === selectedAlbumId
+                  )?.title || ""
+                }
+              />
+            }
           />
         )}
         <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4 min-h-0">
@@ -119,6 +159,12 @@ export default function Home() {
                       title={record.title}
                       artist={record.artist}
                       year={record.year}
+                      recordCover={
+                        <RecordCover
+                          imageString={record.imageString}
+                          title={record.title}
+                        />
+                      }
                     />
                   </button>
                 ))}
