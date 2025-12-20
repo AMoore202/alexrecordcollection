@@ -8,6 +8,7 @@ import { recordResultsList } from "./utils/RecordResultsList";
 import { MailIcon } from "./components/ui/Icons";
 import { Button } from "./components/ui/Button";
 import FilterBar from "./components/ui/FilterBar";
+import RecordDetails from "./components/ui/RecordDetails/RecordDetails";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -58,7 +59,8 @@ export default function Home() {
     <div className="relative flex 2xl:flex-row flex-col h-screen overflow-hidden">
       <DesktopMenu />
       <MobileMenu />
-      <div className="w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
+      <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
+        <RecordDetails />
         <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4 min-h-0">
           <FilterBar
             searchTerm={searchTerm}
