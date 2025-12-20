@@ -110,9 +110,10 @@ export default function Home() {
                   <button
                     key={record.id}
                     onClick={() => handleRecordClick(record.id)}
-                    className="cursor-pointer"
+                    className="cursor-pointer h-fit"
                   >
                     <RecordResult
+                      key={record.id}
                       id={record.id}
                       imageString={record.imageString}
                       title={record.title}
