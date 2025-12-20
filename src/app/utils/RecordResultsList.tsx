@@ -518,6 +518,38 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Black Pumas",
     year: "2019",
     imageString: "/blackPumas.png",
+    recordColour: "#FFFFFF",
+    recordColourDescription: "Simple White",
+    innerColour: "#0C0C0C",
+    recordHighlightColour: "#B93F2D",
+    recordLineColour: "black",
+    speed: "33 ⅓ RPM",
+    musicians: "Eric Burton, Adrian Quesada",
+    description:
+      "A soulful but fresh sound, this debut album is perfectly balanced in its new style",
+    recordNumber: 1,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Black Moon Rising" },
+          { number: "02", title: "Colors" },
+          { number: "03", title: "Know You Better" },
+          { number: "04", title: "Fire" },
+          { number: "05", title: "OCT 33" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Stay Gold" },
+          { number: "07", title: "Old Man" },
+          { number: "08", title: "Confines" },
+          { number: "09", title: "Touch the Sky" },
+          { number: "10", title: "Sweet Conversations" },
+        ],
+      },
+    ],
   },
   {
     id: 14,
@@ -525,6 +557,39 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Fleetwood Mac",
     year: "1975",
     imageString: "/fleetwoodMac.png",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#CE9033",
+    innerColour: "#CE9033",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians:
+      "Stevie Nicks, Lindsey Buckingham, Christine McVie, John McVie, Mick Fleetwood",
+    description: "Rhiannon, Landslide - what more do you need",
+    recordNumber: 10,
+    sides: [
+      {
+        side: "One",
+        tracks: [
+          { number: "01", title: "Monday Morning" },
+          { number: "02", title: "Warm Ways" },
+          { number: "03", title: "Blue Letter" },
+          { number: "04", title: "Rhiannon" },
+          { number: "05", title: "Over My Head" },
+          { number: "06", title: "Crystal" },
+        ],
+      },
+      {
+        side: "Two",
+        tracks: [
+          { number: "07", title: "Say You Love Me" },
+          { number: "08", title: "Landslide" },
+          { number: "09", title: "World Turning" },
+          { number: "10", title: "Sugar Daddy" },
+          { number: "11", title: "I'm So Afraid" },
+        ],
+      },
+    ],
   },
   {
     id: 15,
@@ -532,6 +597,55 @@ export const recordResultsList: RecordResultProps[] = [
     artist: "Taylor Swift",
     year: "2020",
     imageString: "/folklore.png",
+    recordColour: "#8F7E67",
+    recordColourDescription: "Earthly Fairytale",
+    recordHighlightColour: "#DCDCDC",
+    innerColour: "#DCDCDC",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Taylor Swift",
+    description:
+      "Her best album, in my humble opinion, this album was peak covid creativity",
+    recordNumber: 8,
+    sides: [
+      {
+        side: "1",
+        tracks: [
+          { number: "01", title: "the 1" },
+          { number: "02", title: "cardigan" },
+          { number: "03", title: "the last great american dynasty" },
+          { number: "04", title: "exile (feat. Bon Iver)" },
+        ],
+      },
+      {
+        side: "2",
+        tracks: [
+          { number: "05", title: "my tears ricochet" },
+          { number: "06", title: "mirrorball" },
+          { number: "07", title: "seven" },
+          { number: "08", title: "august" },
+          { number: "09", title: "this is me trying" },
+        ],
+      },
+      {
+        side: "3",
+        tracks: [
+          { number: "10", title: "illicit affairs" },
+          { number: "11", title: "invisible string" },
+          { number: "12", title: "mad woman" },
+          { number: "13", title: "epiphany" },
+        ],
+      },
+      {
+        side: "4",
+        tracks: [
+          { number: "14", title: "betty" },
+          { number: "15", title: "peace" },
+          { number: "16", title: "hoax" },
+          { number: "17", title: "the lakes" },
+        ],
+      },
+    ],
   },
   {
     id: 16,
