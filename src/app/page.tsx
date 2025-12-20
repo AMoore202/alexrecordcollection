@@ -60,7 +60,7 @@ export default function Home() {
       <DesktopMenu />
       <MobileMenu />
       <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
-        <RecordDetails />
+        <RecordDetails albumData={recordResultsList[2]} />
         <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4 min-h-0">
           <FilterBar
             searchTerm={searchTerm}
