@@ -2,13 +2,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { RecordResultProps } from "../../utils/types";
 import useMeasure from "react-use-measure";
+import React from "react";
+
+interface RecordResultComponentProps extends RecordResultProps {
+  recordCover?: React.ReactNode;
+}
 
 export default function RecordResult({
   imageString,
   title,
   artist,
   year,
-}: RecordResultProps) {
+  recordCover,
+}: RecordResultComponentProps) {
   const [ref, bounds] = useMeasure();
 
   return (
@@ -33,19 +39,9 @@ export default function RecordResult({
               className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
             />
           </div>
-          <motion.div
-            layoutId={`image-${imageString}`}
-            transition={{ duration: 0.3, bounce: 0, type: "spring" }}
-            className="md:size-[262px] sm:size-[162px] size-[148px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square"
-          >
-            <Image
-              src={imageString}
-              alt={`${title} album cover`}
-              fill
-              sizes="(max-width: 768px) 148px, 262px"
-              className="z-10"
-            />
-          </motion.div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:size-[262px] sm:size-[162px] size-[148px] aspect-square">
+            {recordCover}
+          </div>
         </div>
         <div className="flex flex-col gap-1 md:gap-2 px-4">
           <h2 className="font-sans md:text-2xl text-xl font-semibold text-center">

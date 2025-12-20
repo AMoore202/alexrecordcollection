@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Record from "./Record";
 import Description from "./Description";
@@ -12,11 +11,13 @@ import { recordResultsList } from "@/app/utils/RecordResultsList";
 interface RecordDetailsProps {
   albumId: number;
   onClose: () => void;
+  albumCover?: React.ReactNode;
 }
 
 export default function RecordDetails({
   albumId,
   onClose,
+  albumCover,
 }: RecordDetailsProps) {
   const albumData = recordResultsList.find(
     (album) => album.id === albumId
@@ -44,17 +45,9 @@ export default function RecordDetails({
               innerColour={albumData.innerColour || ""}
               lineColour={albumData.recordLineColour || "white"}
             />
-            <motion.div
-              layoutId={`image-${albumData.imageString}`}
-              transition={{ duration: 0.3, bounce: 0, type: "spring" }}
-              className="size-[200px] lg:size-[320px] aspect-square absolute top-0 mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]"
-            >
-              <Image
-                src={albumData.imageString}
-                alt={`${albumData.title} album cover`}
-                fill
-              />
-            </motion.div>
+            <div className="absolute top-0 mr-[-120px] size-[200px] lg:size-[320px] aspect-square shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
+              {albumCover}
+            </div>
           </div>
           <Description
             artist={albumData.artist}
