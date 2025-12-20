@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Record from "./Record";
 import Description from "./Description";
 import TrackListSide from "./TrackListSide";
@@ -22,7 +23,13 @@ export default function RecordDetails({
   ) as RecordResultProps;
 
   return (
-    <div className="absolute left-0 top-0 z-50 w-full h-screen flex flex-col items-center bg-[#191818] xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="absolute left-0 top-0 z-50 w-full h-screen flex flex-col items-center bg-[#191818] xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide"
+    >
       <button
         className="absolute top-6 right-10 flex items-center z-20 p-2 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer"
         onClick={onClose}
@@ -31,19 +38,23 @@ export default function RecordDetails({
       </button>
       <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">
         <div className="flex items-center gap-12">
-          <div className="flex items-center w-1/2">
-            <div className="size-[320px] aspect-square relative mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
-              <Image
-                src={albumData.imageString}
-                alt={`${albumData.title} album cover`}
-                fill
-              />
-            </div>
+          <div className="relative w-1/2">
             <Record
               colour={albumData.recordColour || ""}
               innerColour={albumData.innerColour || ""}
               lineColour={albumData.recordLineColour || "white"}
             />
+            <motion.div
+              layoutId={`image-${albumData.imageString}`}
+              transition={{ duration: 0.3, bounce: 0, type: "spring" }}
+              className="size-[320px] aspect-square absolute top-0 mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]"
+            >
+              <Image
+                src={albumData.imageString}
+                alt={`${albumData.title} album cover`}
+                fill
+              />
+            </motion.div>
           </div>
           <Description
             artist={albumData.artist}
@@ -68,6 +79,6 @@ export default function RecordDetails({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

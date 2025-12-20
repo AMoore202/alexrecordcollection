@@ -33,7 +33,11 @@ export default function RecordResult({
               className="blur-[5px] opacity-10 z-0 max-w-full h-auto"
             />
           </div>
-          <div className="md:size-[262px] sm:size-[162px] size-[148px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square">
+          <motion.div
+            layoutId={`image-${imageString}`}
+            transition={{ duration: 0.3, bounce: 0, type: "spring" }}
+            className="md:size-[262px] sm:size-[162px] size-[148px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square"
+          >
             <Image
               src={imageString}
               alt={`${title} album cover`}
@@ -41,7 +45,7 @@ export default function RecordResult({
               sizes="(max-width: 768px) 148px, 262px"
               className="z-10"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col gap-1 md:gap-2 px-4">
           <h2 className="font-sans md:text-2xl text-xl font-semibold text-center">

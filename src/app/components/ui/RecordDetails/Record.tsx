@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { motion } from "framer-motion";
 
 interface RecordProps {
   colour: string;
@@ -60,9 +61,12 @@ export default function Record({
   lineColour = "white",
 }: RecordProps) {
   return (
-    <div
+    <motion.div
+      initial={{ x: 0, opacity: 0 }}
+      animate={{ x: 200, opacity: 1 }}
+      transition={{ delay: 0.3, type: "spring", bounce: 0, duration: 0.8 }}
       style={{ backgroundColor: colour }}
-      className="flex size-[310px] rounded-full p-2"
+      className="flex size-[310px] rounded-full p-2 mt-[5px]"
     >
       <SongRings lineColour={lineColour}>
         <SongRings lineColour={lineColour}>
@@ -83,6 +87,6 @@ export default function Record({
           </SongRings>
         </SongRings>
       </SongRings>
-    </div>
+    </motion.div>
   );
 }
