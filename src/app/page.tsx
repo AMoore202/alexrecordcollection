@@ -15,6 +15,7 @@ export default function Home() {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [sortBy, setSortBy] = useState<"year" | "artist">("year");
   const [showOverlay, setShowOverlay] = useState(false);
+  const [selectedAlbumId, setSelectedAlbumId] = useState<number | null>(null);
 
   const filteredRecords = useMemo(() => {
     const term = searchTerm.toLowerCase();
@@ -56,20 +57,19 @@ export default function Home() {
     setSortOrder(newSortOrder);
   };
 
+  const handleRecordClick: (albumId: number) => void = (albumId) => {
+    setSelectedAlbumId(albumId);
+    setShowOverlay(true);
+  };
+
   return (
     <div className="relative flex 2xl:flex-row flex-col h-screen overflow-hidden">
       <DesktopMenu />
       <MobileMenu />
       <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
-        <button
-          className="absolute top-6 left-6 flex items-center z-100 p-2 bg-pink-500 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer"
-          onClick={() => setShowOverlay(true)}
-        >
-          Show Overlay
-        </button>
-        {showOverlay && (
+        {showOverlay && selectedAlbumId !== null && (
           <RecordDetails
-            albumData={recordResultsList[2]}
+            albumId={selectedAlbumId}
             onClose={() => setShowOverlay(false)}
           />
         )}
@@ -107,13 +107,19 @@ export default function Home() {
             <div className="overflow-y-auto scrollbar-hide pt-2 flex-1 min-h-0">
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 sm:gap-4 gap-2 justify-items-center pb-30 lg:pb-10">
                 {sortedRecords.map((record) => (
-                  <RecordResult
+                  <button
                     key={record.id}
-                    imageString={record.imageString}
-                    title={record.title}
-                    artist={record.artist}
-                    year={record.year}
-                  />
+                    onClick={() => handleRecordClick(record.id)}
+                    className="cursor-pointer"
+                  >
+                    <RecordResult
+                      id={record.id}
+                      imageString={record.imageString}
+                      title={record.title}
+                      artist={record.artist}
+                      year={record.year}
+                    />
+                  </button>
                 ))}
               </div>
             </div>

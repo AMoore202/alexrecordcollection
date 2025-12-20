@@ -6,17 +6,20 @@ import Description from "./Description";
 import TrackListSide from "./TrackListSide";
 import { CloseIcon } from "../Icons";
 import { RecordResultProps } from "@/app/utils/types";
+import { recordResultsList } from "@/app/utils/RecordResultsList";
 
 interface RecordDetailsProps {
-  albumData: RecordResultProps;
+  albumId: number;
   onClose: () => void;
 }
 
 export default function RecordDetails({
-  albumData,
+  albumId,
   onClose,
 }: RecordDetailsProps) {
-  const albumDataToUse = albumData;
+  const albumData = recordResultsList.find(
+    (album) => album.id === albumId
+  ) as RecordResultProps;
 
   return (
     <div className="absolute left-0 top-0 z-50 w-full h-screen flex flex-col items-center bg-[#191818] xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
@@ -31,36 +34,36 @@ export default function RecordDetails({
           <div className="flex items-center w-1/2">
             <div className="size-[320px] aspect-square relative mr-[-120px] shadow-[4px_0_4px_0_rgba(0,0,0,0.25)]">
               <Image
-                src={albumDataToUse.imageString}
-                alt={`${albumDataToUse.title} album cover`}
+                src={albumData.imageString}
+                alt={`${albumData.title} album cover`}
                 fill
               />
             </div>
             <Record
-              colour={albumDataToUse.recordColour || ""}
-              innerColour={albumDataToUse.innerColour || ""}
-              lineColour={albumDataToUse.recordLineColour || "white"}
+              colour={albumData.recordColour || ""}
+              innerColour={albumData.innerColour || ""}
+              lineColour={albumData.recordLineColour || "white"}
             />
           </div>
           <Description
-            artist={albumDataToUse.artist}
-            colour={albumDataToUse.recordColour || ""}
-            colourDescription={albumDataToUse.recordColourDescription || ""}
-            title={albumDataToUse.title}
-            year={albumDataToUse.year}
-            recordNumber={albumDataToUse.recordNumber || 0}
-            speed={albumDataToUse.speed || ""}
-            musicians={albumDataToUse.musicians || ""}
-            description={albumDataToUse.description || ""}
-            highlightColor={albumDataToUse.recordHighlightColour || ""}
+            artist={albumData.artist}
+            colour={albumData.recordColour || ""}
+            colourDescription={albumData.recordColourDescription || ""}
+            title={albumData.title}
+            year={albumData.year}
+            recordNumber={albumData.recordNumber || 0}
+            speed={albumData.speed || ""}
+            musicians={albumData.musicians || ""}
+            description={albumData.description || ""}
+            highlightColor={albumData.recordHighlightColour || ""}
           />
         </div>
         <div className="grid grid-cols-2 gap-8 pb-8">
-          {albumDataToUse.sides?.map((side) => (
+          {albumData.sides?.map((side) => (
             <TrackListSide
               key={side.side}
               sideData={side}
-              highlightColour={albumDataToUse.recordHighlightColour || ""}
+              highlightColour={albumData.recordHighlightColour || ""}
             />
           ))}
         </div>

@@ -17,7 +17,7 @@ export type RecordSide = {
 };
 
 export type RecordResultProps = {
-  id?: number;
+  id: number;
   imageString: string;
   title: string;
   artist: string;
