@@ -9,14 +9,21 @@ import { RecordResultProps } from "@/app/utils/types";
 
 interface RecordDetailsProps {
   albumData: RecordResultProps;
+  onClose: () => void;
 }
 
-export default function RecordDetails({ albumData }: RecordDetailsProps) {
+export default function RecordDetails({
+  albumData,
+  onClose,
+}: RecordDetailsProps) {
   const albumDataToUse = albumData;
 
   return (
     <div className="absolute left-0 top-0 z-50 w-full h-screen flex flex-col items-center bg-[#191818] xl:pt-10 pt-5 overflow-y-scroll scrollbar-hide">
-      <button className="absolute top-6 right-10 flex items-center z-20 p-2 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer">
+      <button
+        className="absolute top-6 right-10 flex items-center z-20 p-2 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer"
+        onClick={onClose}
+      >
         <CloseIcon className="text-[#C4C4C4] size-10" />
       </button>
       <div className="w-full max-w-[1100px] flex flex-col xl:gap-10 gap-4 h-full px-4">

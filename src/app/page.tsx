@@ -14,6 +14,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [sortBy, setSortBy] = useState<"year" | "artist">("year");
+  const [showOverlay, setShowOverlay] = useState(false);
 
   const filteredRecords = useMemo(() => {
     const term = searchTerm.toLowerCase();
@@ -60,7 +61,18 @@ export default function Home() {
       <DesktopMenu />
       <MobileMenu />
       <div className="relative w-full h-screen flex flex-col items-center xl:pt-10 pt-5 z-0 min-h-0">
-        <RecordDetails albumData={recordResultsList[2]} />
+        <button
+          className="absolute top-6 left-6 flex items-center z-100 p-2 bg-pink-500 rounded-lg hover:bg-white/[0.04] transition duration-100 cursor-pointer"
+          onClick={() => setShowOverlay(true)}
+        >
+          Show Overlay
+        </button>
+        {showOverlay && (
+          <RecordDetails
+            albumData={recordResultsList[2]}
+            onClose={() => setShowOverlay(false)}
+          />
+        )}
         <div className="w-full max-w-[1360px] flex flex-col xl:gap-8 gap-4 h-full px-4 min-h-0">
           <FilterBar
             searchTerm={searchTerm}
