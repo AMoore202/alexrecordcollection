@@ -647,20 +647,133 @@ export const recordResultsList: RecordResultProps[] = [
       },
     ],
   },
-  // {
-  //   id: 16,
-  //   title: "Stick Season",
-  //   artist: "Noah Kahan",
-  //   year: "2022",
-  //   imageString: "/stickSeason.webp",
-  // },
-  // {
-  //   id: 17,
-  //   title: "Unreal Unearth",
-  //   artist: "Hozier",
-  //   year: "2023",
-  //   imageString: "/unrealUnearth.webp",
-  // },
+  {
+    id: 16,
+    title: "Stick Season",
+    artist: "Noah Kahan",
+    year: "2022",
+    imageString: "/stickSeason.webp",
+    recordColour: "#251F1F",
+    recordColourDescription: "Woodsy Brown",
+    recordHighlightColour: "#8A6B58",
+    innerColour: "#D4C0A6",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Noah Kahan",
+    description:
+      "A huge album, defining Kahan's signature New England folk sound",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "Northern Attitude" },
+          { number: "02", title: "Stick Season" },
+          { number: "03", title: "All My Love" },
+          { number: "04", title: "She Calls Me Back" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "05", title: "Come Over" },
+          { number: "06", title: "New Perspective" },
+          { number: "07", title: "Everywhere, Everything" },
+        ],
+      },
+      {
+        side: "C",
+        tracks: [
+          { number: "08", title: "Orange Juice" },
+          { number: "09", title: "Strawberry Wine" },
+          { number: "10", title: "Growing Sideways" },
+          { number: "11", title: "Halloween" },
+        ],
+      },
+      {
+        side: "D",
+        tracks: [
+          { number: "12", title: "Homesick" },
+          { number: "13", title: "Still" },
+          { number: "14", title: "The View Between Villages" },
+        ],
+      },
+      {
+        side: "E",
+        tracks: [
+          { number: "15", title: "Your Needs, My Needs" },
+          { number: "16", title: "Dial Drunk" },
+          { number: "17", title: "Paul Revere" },
+          { number: "18", title: "No Complaints" },
+        ],
+      },
+      {
+        side: "F",
+        tracks: [
+          { number: "19", title: "Call Your Mom" },
+          { number: "20", title: "You're Gonna Go Far" },
+          { number: "21", title: "The View Between Villages (Extended)" },
+        ],
+      },
+    ],
+  },
+  {
+    id: 17,
+    title: "Unreal Unearth",
+    artist: "Hozier",
+    year: "2023",
+    imageString: "/unrealUnearth.webp",
+    recordColour: "#000000",
+    recordColourDescription: "Classic Black",
+    recordHighlightColour: "#C6985B",
+    innerColour: "#C6985B",
+    recordLineColour: "white",
+    speed: "33 ⅓ RPM",
+    musicians: "Andrew Hozier-Byrne",
+    description:
+      "Part fairy tale, part booming anthem, this album weaves through multiple languages and sounds effortlessly",
+    recordNumber: 3,
+    sides: [
+      {
+        side: "A",
+        tracks: [
+          { number: "01", title: "De Selby (Part 1)" },
+          { number: "02", title: "De Selby (Part 2)" },
+          { number: "03", title: "First Time" },
+          { number: "04", title: "Francesca" },
+          { number: "05", title: "I, Carrion (Icarian)" },
+        ],
+      },
+      {
+        side: "B",
+        tracks: [
+          { number: "06", title: "Eat Your Young" },
+          { number: "07", title: "Damage Gets Done (ft. Brandi Carlile)" },
+          { number: "08", title: "Who We Are" },
+        ],
+      },
+      {
+        side: "C",
+        tracks: [
+          { number: "09", title: "Son of Nyx" },
+          { number: "10", title: "All Things End" },
+          {
+            number: "11",
+            title: "To Someone From A Warm Climate (UISCEFHUAREITHE)",
+          },
+          { number: "12", title: "Butchered Tongue" },
+        ],
+      },
+      {
+        side: "D",
+        tracks: [
+          { number: "13", title: "Anything But" },
+          { number: "14", title: "Abstract (Pyschopomp)" },
+          { number: "15", title: "Unknown, Nth" },
+        ],
+      },
+    ],
+  },
   {
     id: 18,
     title: "Boxer",
